@@ -2,9 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/common/constant.dart';
 import 'package:flutter_study_app/common/events.dart';
-import 'package:flutter_study_app/pages/event_bus_page.dart';
-import 'package:flutter_study_app/pages/home_page.dart';
-import 'package:flutter_study_app/pages/sqflite_page.dart';
+import 'package:flutter_study_app/ui/pages/event_bus_demo.dart';
+import 'package:flutter_study_app/ui/pages/file_zip_demo.dart';
+import 'package:flutter_study_app/ui/pages/home_page.dart';
+import 'package:flutter_study_app/ui/pages/sqflite_demo.dart';
 import 'package:flutter_study_app/res/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -59,6 +60,7 @@ class _MyAppState extends State<MyApp>{
       routes: <String,WidgetBuilder>{
         Constant.SQFLITE_ROUTE:(BuildContext context) => SqflitePage(),
         Constant.EVENTBUS_ROUTE:(BuildContext context) => EventBusPage(),
+        Constant.FILE_ZIP_ROUTE:(BuildContext context) => FileZipDemo(),
       },
     );
   }

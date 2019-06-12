@@ -38,6 +38,7 @@ class _SqflitePageState extends State<SqflitePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         iconTheme: IconThemeData(color: Colors.white),
         title: Text("sqflite数据存储",style: TextStyle(color: Colors.white),),
       ),

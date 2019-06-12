@@ -34,6 +34,7 @@ class _EventBusPageState extends State<EventBusPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         iconTheme: IconThemeData(color: Colors.white),
         title: Text("eventbus事件总线",style: TextStyle(color: Colors.white),),
       ),
