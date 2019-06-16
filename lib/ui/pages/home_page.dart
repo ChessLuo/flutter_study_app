@@ -15,7 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color(0xfff2f2f2),
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Flutter学习',style: TextStyle(color: Colors.white),),
+          title: Text('learning flutter',style: TextStyle(color: Colors.white),),
         ),
         body:ListView(
           children: <Widget>[

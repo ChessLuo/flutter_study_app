@@ -16,4 +16,8 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## 1.修改主题色效果图
+![](./assets/home.png)
+## 2.修改主题色效果图
 ![](./assets/gfone.gif)
+## 3.解压缩插件使用
+![](./assets/zip.png)
