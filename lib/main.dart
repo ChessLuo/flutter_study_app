@@ -7,6 +7,7 @@ import 'package:flutter_study_app/ui/demo/file_zip_demo.dart';
 import 'package:flutter_study_app/ui/pages/home_page.dart';
 import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
 import 'package:flutter_study_app/res/colors.dart';
+import 'package:flutter_study_app/ui/pages/transition_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyApp());
@@ -56,8 +57,9 @@ class _MyAppState extends State<MyApp>{
       theme: ThemeData(
         primaryColor: _primaryColor,
       ),
-      home: MyHomePage(),
+      home: TransitionPage(),
       routes: <String,WidgetBuilder>{
+        Constant.HOME_PAGE:(BuildContext context) => MyHomePage(),
         Constant.SQFLITE_ROUTE:(BuildContext context) => SqflitePage(),
         Constant.EVENTBUS_ROUTE:(BuildContext context) => EventBusPage(),
         Constant.FILE_ZIP_ROUTE:(BuildContext context) => FileZipDemo(),

@@ -4,7 +4,7 @@ A new Flutter application.
 
 
 ## 1.主页效果图
-<img border="1" src="./assets/home.png" width="310" height="auto">
+<img border="1" src="./assets/home.gif" width="310" height="auto">
 
 ## 2.修改主题色效果图
 ![](./assets/gfone.gif)
