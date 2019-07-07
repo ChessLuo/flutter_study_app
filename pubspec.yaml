@@ -37,6 +37,13 @@ dependencies:
   archive: ^2.0.10
   #permission
   permission_handler: ^3.1.0
+  #
+#  flutter_webview_plugin: ^0.3.5
+  flutter_webview_plugin:
+      path: ./../flutter_webview_plugin/
+#  flutter_webview_plugin:
+#      git:
+#      url: git://github.com/ChessLuo/flutter_webview_plugin.git
 
 dev_dependencies:
   flutter_test:

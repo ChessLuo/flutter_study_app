@@ -130,6 +130,7 @@ class _FileZipDemoState extends State<FileZipDemo> {
           ..create(recursive: true);
       }
     }
+    Fluttertoast.showToast(msg: "解压成功");
     print("解压成功");
   }
 

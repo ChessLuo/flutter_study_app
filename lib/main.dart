@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/common/constant.dart';
 import 'package:flutter_study_app/common/events.dart';
-import 'package:flutter_study_app/ui/pages/event_bus_demo.dart';
-import 'package:flutter_study_app/ui/pages/file_zip_demo.dart';
+import 'package:flutter_study_app/ui/demo/event_bus_demo.dart';
+import 'package:flutter_study_app/ui/demo/file_zip_demo.dart';
 import 'package:flutter_study_app/ui/pages/home_page.dart';
-import 'package:flutter_study_app/ui/pages/sqflite_demo.dart';
+import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
 import 'package:flutter_study_app/res/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

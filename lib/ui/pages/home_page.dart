@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/common/constant.dart';
+import 'package:flutter_study_app/ui/demo/webview_demo.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color(0xfff2f2f2),
         appBar: AppBar(
           centerTitle: true,
-          title: Text('learning flutter',style: TextStyle(color: Colors.white),),
+          title: Text('学无止境',style: TextStyle(color: Colors.white),),
         ),
         body:ListView(
           children: <Widget>[
@@ -55,6 +56,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
                   Navigator.of(context).pushNamed(Constant.FILE_ZIP_ROUTE);
+                },
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
+              ),
+              child: ListTile(
+                title: Text("WebView（flutter_webview_plugin）"),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) =>
+                          WebView(url: "https://github.com/ChessLuo",title: "程序猿在广东",)));
                 },
               ),
             ),
