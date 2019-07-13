@@ -43,8 +43,8 @@ class _SqflitePageState extends State<SqflitePage> {
         title: Text("sqflite数据存储",style: TextStyle(color: Colors.white),),
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
-        child: Column(
+        margin: EdgeInsets.only(left: 20,right: 20),
+        child: ListView(
           children: <Widget>[
             Center(
               child: Text("设置进入程序默认创建数据库和一张学生表，如下可对表的姓名、年龄进行增删改查操作：",style: TextStyle(fontSize: 14,color: Color(0xff666666)),),
