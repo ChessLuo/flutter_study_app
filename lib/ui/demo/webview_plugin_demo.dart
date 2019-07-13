@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 
-class WebView extends StatefulWidget {
+class WebViewPlgin extends StatefulWidget {
   final String url;   //web地址
   final String title;//标题
 
-  WebView(
+  WebViewPlgin(
       {this.url,
       this.title="详情",});
 
@@ -16,7 +16,7 @@ class WebView extends StatefulWidget {
   _WebViewState createState() => _WebViewState();
 }
 
-class _WebViewState extends State<WebView> {
+class _WebViewState extends State<WebViewPlgin> {
   final flutterWebviewPlugin = FlutterWebviewPlugin();
   StreamSubscription<String> _onUrlChanged;
   StreamSubscription<WebViewStateChanged> _onStateChanged;
@@ -60,7 +60,7 @@ class _WebViewState extends State<WebView> {
         initialChild: Container(
           color: Colors.white,
           child: Center(
-            child: Text('Waiting...'),
+            child: CircularProgressIndicator(),
           ),
         ),
       ),

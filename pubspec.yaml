@@ -45,6 +45,9 @@ dependencies:
 #      git:
 #      url: git://github.com/ChessLuo/flutter_webview_plugin.git
 
+  #flutter官方webview
+  webview_flutter: ^0.3.9+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

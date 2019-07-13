@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/common/constant.dart';
-import 'package:flutter_study_app/ui/demo/webview_demo.dart';
+import 'package:flutter_study_app/ui/demo/flutter_webview_demo.dart';
+import 'package:flutter_study_app/ui/demo/webview_plugin_demo.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -8,6 +9,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  List itemTitles = [
+    'sqflite数据库',
+    'eventbus事件总线',
+    '文件解压缩',
+    'WebView（flutter_webview_plugin）',
+    'WebView（flutter官方插件）',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
               ),
               child: ListTile(
-                title: Text("sqflite数据库"),
+                title: Text(itemTitles[0]),
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
                   Navigator.of(context).pushNamed(Constant.SQFLITE_ROUTE);
@@ -39,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
               ),
               child: ListTile(
-                title: Text("eventbus事件总线"),
+                title: Text(itemTitles[1]),
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
                   Navigator.of(context).pushNamed(Constant.EVENTBUS_ROUTE);
@@ -52,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
               ),
               child: ListTile(
-                title: Text("文件解压缩"),
+                title: Text(itemTitles[2]),
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
                   Navigator.of(context).pushNamed(Constant.FILE_ZIP_ROUTE);
@@ -65,12 +74,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
               ),
               child: ListTile(
-                title: Text("WebView（flutter_webview_plugin）"),
+                title: Text(itemTitles[3]),
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) =>
-                          WebView(url: "https://github.com/ChessLuo",title: "程序猿在广东",)));
+                          WebViewPlgin(url: "https://github.com/ChessLuo",title: "flutter_webview_plugin",)));
+                },
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: BorderDirectional(bottom: BorderSide(color: Colors.grey))
+              ),
+              child: ListTile(
+                title: Text(itemTitles[4]),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) =>
+                          FlutterWebView(url: "https://github.com/ChessLuo",barTitle: "flutter_webview",)));
                 },
               ),
             ),

@@ -11,7 +11,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_study_app"
+        android:label="FlApp"
         android:icon="@mipmap/logo">
         <activity
             android:name=".MainActivity"
