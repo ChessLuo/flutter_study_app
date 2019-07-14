@@ -19,8 +19,8 @@ class DrawerPage extends StatefulWidget{
 
 class _DrawerPageState extends State<DrawerPage> {
 
-  var itemTitles = ["主题","关于","GitHub"];
-  var itemIcons = [Icons.brightness_medium,Icons.android,Icons.people];
+  var itemTitles = ["主题","GitHub","关于"];
+  var itemIcons = [Icons.brightness_medium,Icons.people,Icons.android];
 
   @override
   Widget build(BuildContext context) {
