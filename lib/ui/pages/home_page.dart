@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
      children: <Widget>[
        _listItem(itemTitles[0],(){//sqflite数据库
          Application.router.navigateTo(context,
-             Routes.sqflitePage,transition: TransitionType.inFromRight);
+             Routes.sqflitePage,transition: TransitionType.fadeIn);
        }),
 
        _listItem(itemTitles[1],(){//eventbus事件总线
@@ -61,25 +61,44 @@ class _MyHomePageState extends State<MyHomePage> {
        }),
 
        _listItem(itemTitles[2],(){//文件解压缩
-         Application.router.navigateTo(context,
-             Routes.fileZipPage,transition: TransitionType.inFromRight);
+         //自定义页面路由动画
+         var transition = (BuildContext context, Animation<double> animation,
+             Animation<double> secondaryAnimation, Widget child) {
+           return ScaleTransition(//缩放
+             scale: animation,
+             child: RotationTransition(//旋转
+               turns: animation,
+               child: child,
+             ),
+           );
+         };
+         Application.router.navigateTo(
+           context,
+           Routes.fileZipPage,
+           transition: TransitionType.custom,
+           transitionBuilder: transition,
+           transitionDuration: Duration(milliseconds: 1000),
+         );
        }),
 
        _listItem(itemTitles[3],(){//WebView（flutter_webview_plugin）
-         Application.router.navigateTo(context,
-             '${Routes.webViewPlginPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview_plugin',
-             transition: TransitionType.inFromRight);
+
+         Application.router.navigateTo(
+           context,
+           '${Routes.webViewPlginPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview_plugin',
+           transition: TransitionType.inFromLeft,
+         );
        }),
 
        _listItem(itemTitles[4],(){//WebView（flutter官方插件）
          Application.router.navigateTo(context,
              '${Routes.flutterWebViewPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview',
-             transition: TransitionType.inFromRight);
+             transition: TransitionType.material);
        }),
 
        _listItem(itemTitles[5],(){//provider状态管理
          Application.router.navigateTo(context,
-             Routes.providerPage,transition: TransitionType.inFromRight);
+             Routes.providerPage,transition: TransitionType.cupertino);
        }),
 
 
