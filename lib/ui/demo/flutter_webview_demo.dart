@@ -27,10 +27,14 @@ class FlutterWebView extends StatefulWidget {
 
 class WebViewState extends State<FlutterWebView> with AutomaticKeepAliveClientMixin {
 
+  String _webUrl;
 
   @override
   void initState(){
     super.initState();
+    _webUrl = Uri.decodeComponent(widget.url);
+
+    print("web url == $_webUrl");
 
   }
 
@@ -74,7 +78,7 @@ class WebViewState extends State<FlutterWebView> with AutomaticKeepAliveClientMi
 
               _loading
                   ? Center(child: CircularProgressIndicator(),)
-                  :Container(width: 0,height: 0,),
+                  :Container(),
 
             ],
           );

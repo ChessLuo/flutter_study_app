@@ -1,11 +1,9 @@
 import 'dart:async';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/common/constant.dart';
 import 'package:flutter_study_app/common/events.dart';
-import 'package:flutter_study_app/ui/demo/event_bus_demo.dart';
-import 'package:flutter_study_app/ui/demo/file_zip_demo.dart';
-import 'package:flutter_study_app/ui/pages/home_page.dart';
-import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
+import 'package:flutter_study_app/routers/application.dart';
+import 'package:flutter_study_app/routers/routers.dart';
 import 'package:flutter_study_app/res/colors.dart';
 import 'package:flutter_study_app/ui/pages/transition_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,6 +11,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+
+  MyApp()  {
+    final router = new Router();
+    Routes.configureRoutes(router);
+    Application.router = router;
+  }
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -58,12 +63,7 @@ class _MyAppState extends State<MyApp>{
         primaryColor: _primaryColor,
       ),
       home: TransitionPage(),
-      routes: <String,WidgetBuilder>{
-        Constant.HOME_PAGE:(BuildContext context) => MyHomePage(),
-        Constant.SQFLITE_ROUTE:(BuildContext context) => SqflitePage(),
-        Constant.EVENTBUS_ROUTE:(BuildContext context) => EventBusPage(),
-        Constant.FILE_ZIP_ROUTE:(BuildContext context) => FileZipDemo(),
-      },
+      onGenerateRoute: Application.router.generator,
     );
   }
 

@@ -1,7 +1,14 @@
+import 'package:fluro/fluro.dart';
+/**
+ * @描述 首页
+ * @author chessluo
+ * @email superluo666@gmail.com
+ * @date 2019/7/21
+ *
+ */
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/common/constant.dart';
-import 'package:flutter_study_app/ui/demo/flutter_webview_demo.dart';
-import 'package:flutter_study_app/ui/demo/webview_plugin_demo.dart';
+import 'package:flutter_study_app/routers/application.dart';
+import 'package:flutter_study_app/routers/routers.dart';
 import 'package:flutter_study_app/ui/pages/drawer_page.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -19,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
     '文件解压缩',
     'WebView（flutter_webview_plugin）',
     'WebView（flutter官方插件）',
+    'provider状态管理',
   ];
 
   @override
@@ -42,29 +50,38 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _showBody(){
    return ListView(
      children: <Widget>[
-       _listItem(itemTitles[0],(){
-         Navigator.of(context).pushNamed(Constant.SQFLITE_ROUTE);
+       _listItem(itemTitles[0],(){//sqflite数据库
+         Application.router.navigateTo(context,
+             Routes.sqflitePage,transition: TransitionType.inFromRight);
        }),
 
-       _listItem(itemTitles[1],(){
-         Navigator.of(context).pushNamed(Constant.EVENTBUS_ROUTE);
+       _listItem(itemTitles[1],(){//eventbus事件总线
+         Application.router.navigateTo(context,
+             Routes.eventBusPage,transition: TransitionType.inFromRight);
        }),
 
-       _listItem(itemTitles[2],(){
-         Navigator.of(context).pushNamed(Constant.FILE_ZIP_ROUTE);
+       _listItem(itemTitles[2],(){//文件解压缩
+         Application.router.navigateTo(context,
+             Routes.fileZipPage,transition: TransitionType.inFromRight);
        }),
 
-       _listItem(itemTitles[3],(){
-         Navigator.push(context,
-             MaterialPageRoute(builder: (BuildContext context) =>
-                 WebViewPlgin(url: "https://github.com/ChessLuo",title: "flutter_webview_plugin",)));
+       _listItem(itemTitles[3],(){//WebView（flutter_webview_plugin）
+         Application.router.navigateTo(context,
+             '${Routes.webViewPlginPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview_plugin',
+             transition: TransitionType.inFromRight);
        }),
 
-       _listItem(itemTitles[4],(){
-         Navigator.push(context,
-             MaterialPageRoute(builder: (BuildContext context) =>
-                 FlutterWebView(url: "https://github.com/ChessLuo",barTitle: "flutter_webview",)));
+       _listItem(itemTitles[4],(){//WebView（flutter官方插件）
+         Application.router.navigateTo(context,
+             '${Routes.flutterWebViewPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview',
+             transition: TransitionType.inFromRight);
        }),
+
+       _listItem(itemTitles[5],(){//provider状态管理
+         Application.router.navigateTo(context,
+             Routes.providerPage,transition: TransitionType.inFromRight);
+       }),
+
 
      ],
    );

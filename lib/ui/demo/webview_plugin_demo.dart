@@ -25,6 +25,8 @@ class _WebViewState extends State<WebViewPlgin> {
   @override
   void initState() {
     super.initState();
+    print("web url == ${widget.url}");
+
     flutterWebviewPlugin.close();
     _onUrlChanged = flutterWebviewPlugin.onUrlChanged.listen((String url) {});
     _onStateChanged = flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged state) {
