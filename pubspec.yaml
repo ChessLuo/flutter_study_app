@@ -27,7 +27,7 @@ dependencies:
   sqflite: ^1.1.5 #数据库
   fluttertoast: ^3.0.4 #toast提示
   event_bus: ^1.1.0 #eventbus
-  shared_preferences: ^0.5.2+1 #sp
+  shared_preferences: ^0.5.3+4 #sp
   path_provider: ^1.1.0 #文件路径管理
   archive: ^2.0.10 #解/压缩
   permission_handler: ^3.1.0 #permission

@@ -15,6 +15,7 @@ class Routes {
   static String webViewPlginPage = "/webViewPlgin";
   static String flutterWebViewPage = "/flutterWebView";
   static String providerPage = "/provider";
+  static String sharedPreferences = "/sharedPreferences";
 
 
   static void configureRoutes(Router router) {

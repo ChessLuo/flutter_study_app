@@ -27,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'WebView（flutter_webview_plugin）',
     'WebView（flutter官方插件）',
     'provider状态管理',
+    'shared_preferences数据持久化',
   ];
 
   @override
@@ -72,12 +73,17 @@ class _MyHomePageState extends State<MyHomePage> {
              ),
            );
          };
+//         Application.router.navigateTo(
+//           context,
+//           Routes.fileZipPage,
+//           transition: TransitionType.custom,
+//           transitionBuilder: transition,
+////           transitionDuration: Duration(milliseconds: 1000),
+//         );
          Application.router.navigateTo(
            context,
            Routes.fileZipPage,
-           transition: TransitionType.custom,
-           transitionBuilder: transition,
-           transitionDuration: Duration(milliseconds: 1000),
+           transition: TransitionType.inFromLeft,
          );
        }),
 
@@ -86,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
          Application.router.navigateTo(
            context,
            '${Routes.webViewPlginPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview_plugin',
-           transition: TransitionType.inFromLeft,
+           transition: TransitionType.native,
          );
        }),
 
@@ -101,6 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
              Routes.providerPage,transition: TransitionType.cupertino);
        }),
 
+//       _listItem(itemTitles[6],(){//shared_preferences数据持久化
+//         Application.router.navigateTo(context,
+//             Routes.providerPage,transition: TransitionType.cupertino);
+//       }),
 
      ],
    );
