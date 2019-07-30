@@ -32,6 +32,7 @@ class Routes {
     router.define(webViewPlginPage, handler: webViewPlginHandler);
     router.define(flutterWebViewPage, handler: flutterWebViewHandler);
     router.define(providerPage, handler: providerHandler);
+    router.define(sharedPreferences, handler: spHandler);
 
 
   }

@@ -3,6 +3,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter_study_app/ui/demo/event_bus_demo.dart';
 import 'package:flutter_study_app/ui/demo/file_zip_demo.dart';
 import 'package:flutter_study_app/ui/demo/flutter_webview_demo.dart';
+import 'package:flutter_study_app/ui/demo/preferences_demo.dart';
 import 'package:flutter_study_app/ui/demo/provider_demo/provider_demo.dart';
 import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
 import 'package:flutter_study_app/ui/demo/webview_plugin_demo.dart';
@@ -65,4 +66,10 @@ var flutterWebViewHandler = Handler(
 var providerHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       return ProviderDemoPage();
+    });
+
+//sharedPreferences
+var spHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      return PreferencesDemo();
     });

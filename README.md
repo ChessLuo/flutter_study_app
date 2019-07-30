@@ -32,3 +32,5 @@ samples, guidance on mobile development, and a full API reference.
 ## 5.fluro路由管理
 <img border="1" src="./assets/router.gif" width="310" height="auto">
 
+## 6.shared_preferences
+<img border="1" src="./assets/shared_preferences.gif" width="310" height="auto">

@@ -107,10 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
              Routes.providerPage,transition: TransitionType.cupertino);
        }),
 
-//       _listItem(itemTitles[6],(){//shared_preferences数据持久化
-//         Application.router.navigateTo(context,
-//             Routes.providerPage,transition: TransitionType.cupertino);
-//       }),
+       _listItem(itemTitles[6],(){//shared_preferences数据持久化
+         Application.router.navigateTo(context,
+             Routes.sharedPreferences,transition: TransitionType.inFromLeft);
+       }),
 
      ],
    );
