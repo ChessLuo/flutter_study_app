@@ -28,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'WebView（flutter官方插件）',
     'provider状态管理',
     'shared_preferences数据持久化',
+    'Flutter Channel',
   ];
 
   @override
@@ -112,6 +113,10 @@ class _MyHomePageState extends State<MyHomePage> {
              Routes.sharedPreferences,transition: TransitionType.inFromLeft);
        }),
 
+       _listItem(itemTitles[7],(){//Flutter Channel
+         Application.router.navigateTo(context,
+             Routes.flutterChannel,transition: TransitionType.inFromRight);
+       }),
      ],
    );
   }

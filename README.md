@@ -34,3 +34,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 6.shared_preferences
 <img border="1" src="./assets/shared_preferences.gif" width="310" height="auto">
+
+## 7.flutter channel
+<img border="1" src="./assets/channel.gif" width="310" height="auto">

@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.chessluo.flutter_study_app">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
@@ -13,7 +14,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="FlApp"
         android:icon="@mipmap/logo"
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

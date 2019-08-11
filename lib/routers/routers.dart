@@ -16,6 +16,7 @@ class Routes {
   static String flutterWebViewPage = "/flutterWebView";
   static String providerPage = "/provider";
   static String sharedPreferences = "/sharedPreferences";
+  static String flutterChannel = "/flutterChannel";
 
 
   static void configureRoutes(Router router) {
@@ -33,7 +34,7 @@ class Routes {
     router.define(flutterWebViewPage, handler: flutterWebViewHandler);
     router.define(providerPage, handler: providerHandler);
     router.define(sharedPreferences, handler: spHandler);
-
+    router.define(flutterChannel, handler: channelHandler);
 
   }
 }
