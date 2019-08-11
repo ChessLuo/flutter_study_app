@@ -2,6 +2,11 @@
 
 A new Flutter application.
 
+## 入门与进阶
+* [Google/flutter](https://github.com/flutter/flutter)
+* [flutter中文官网](https://flutterchina.club/get-started/install/)
+* [alibaba/flutter-go](https://github.com/alibaba/flutter-go)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
