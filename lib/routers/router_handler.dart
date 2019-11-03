@@ -7,8 +7,9 @@ import 'package:flutter_study_app/ui/demo/flutter_webview_demo.dart';
 import 'package:flutter_study_app/ui/demo/preferences_demo.dart';
 import 'package:flutter_study_app/ui/demo/provider_demo/provider_demo.dart';
 import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
+import 'package:flutter_study_app/ui/demo/url_launcher_demo.dart';
 import 'package:flutter_study_app/ui/demo/webview_plugin_demo.dart';
-import 'package:flutter_study_app/ui/pages/home_page.dart';
+import 'package:flutter_study_app/ui/pages/home/home_page.dart';
 import 'package:flutter_study_app/ui/pages/transition_page.dart';
 
 
@@ -79,4 +80,10 @@ var spHandler = Handler(
 var channelHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       return ChannelDemo();
+    });
+
+//flutter channel
+var urlLauncherHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      return UrlLauncherDemo();
     });

@@ -42,3 +42,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 7.flutter channel
 <img border="1" src="./assets/channel.gif" width="310" height="auto">
+
+## .flutter url_launcher
+<img border="1" src="./assets/url_launcher.gif" width="310" height="auto">

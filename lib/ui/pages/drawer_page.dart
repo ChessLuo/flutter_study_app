@@ -30,7 +30,7 @@ class _DrawerPageState extends State<DrawerPage> {
         children: <Widget>[
           UserAccountsDrawerHeader(
             accountName: Text('程序猿在广东',style: TextStyle(fontWeight: FontWeight.bold),),
-            accountEmail: Text('这个世界不属于90后，只属于努力后！',maxLines: 2,),
+            accountEmail: Text('这个世界不属于90后，只属于努力后！微信搜索 程序猿在广东，了解更多',maxLines: 2,),
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage(
                   'assets/images/logo.jpg'
