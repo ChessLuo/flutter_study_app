@@ -23,13 +23,13 @@ samples, guidance on mobile development, and a full API reference.
 #### 样式效果演示
 |主页|修改主题色|解压缩插件|
 |:---:|:---:|:---:|
-|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/home.gif)|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/gfone.gif)|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/zip.png)|
+|<img border="1" src="./assets/home.gif" width="310" height="auto">|<img border="1" src="./assets/gfone.gif" width="310" height="auto">|<img border="1" src="./assets/zip.png" width="310" height="auto">|
 
 |flutterWebviewPlugin|fluro路由|shared_preferences|
 |:---:|:---:|:---:|
-|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/channel.gif)|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/router.gif)|<img border="1" src="./assets/shared_preferences.gif" width="310" height="auto">|
+|<img border="1" src="./assets/webview.gif" width="310" height="auto">|<img border="1" src="./assets/router.gif" width="310" height="auto">|<img border="1" src="./assets/shared_preferences.gif" width="310" height="auto">|
 
 |sqflite数据库|flutter channel|flutter url_launcher|
 |:---:|:---:|:---:|
-|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/channel.gif)|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/channel.gif)|![](https://raw.githubusercontent.com/ChessLuo/flutter_study_app/master/assets/url_launcher.gif)|
+|<img border="1" src="./assets/sqflite.png" width="310" height="auto">|<img border="1" src="./assets/channel.gif" width="310" height="auto">|<img border="1" src="./assets/url_launcher.gif" width="310" height="auto">|
 
