@@ -82,7 +82,7 @@ var channelHandler = Handler(
       return ChannelDemo();
     });
 
-//flutter channel
+//urlLauncher
 var urlLauncherHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       return UrlLauncherDemo();
