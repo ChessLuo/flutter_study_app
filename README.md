@@ -26,6 +26,10 @@ A new Flutter application.
 |:---:|:---:|:---:|
 |<img border="1" src="./assets/sqflite.png" width="310" height="auto">|<img border="1" src="./assets/channel.gif" width="310" height="auto">|<img border="1" src="./assets/url_launcher.gif" width="310" height="auto">|
 
+|全局变灰|||
+|:---:|:---:|:---:|
+|<img border="1" src="./assets/gray.gif" width="310" height="auto">|||
+
 
 |Dart|
 |:---:|
