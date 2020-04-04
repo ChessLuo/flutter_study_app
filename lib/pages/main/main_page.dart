@@ -6,8 +6,8 @@
  *
  */
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/ui/pages/drawer/drawer_page.dart';
-import 'package:flutter_study_app/ui/pages/home/home_page.dart';
+import 'package:flutter_study_app/pages/drawer/drawer_page.dart';
+import 'package:flutter_study_app/pages/home/home_page.dart';
 
 class MainPage extends StatefulWidget {
   @override

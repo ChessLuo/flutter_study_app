@@ -5,7 +5,7 @@ import 'package:flutter_study_app/common/events.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
 import 'package:flutter_study_app/res/colors.dart';
-import 'package:flutter_study_app/ui/pages/transition_page.dart';
+import 'package:flutter_study_app/pages/transition_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyApp());

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
-import 'package:flutter_study_app/ui/pages/main/main_page.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/event_bus_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/file_zip_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/flutter_channel_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/flutter_webview_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/preferences_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/provider_demo/provider_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/sqflite_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/url_launcher_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/demo/webview_plugin_demo.dart';
-import 'package:flutter_study_app/ui/pages/other/other_page.dart';
-import 'package:flutter_study_app/ui/pages/transition_page.dart';
+import 'package:flutter_study_app/pages/main/main_page.dart';
+import 'package:flutter_study_app/pages/other/demo/event_bus_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/file_zip_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/flutter_channel_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/flutter_webview_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/preferences_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/provider_demo/provider_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/sqflite_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/url_launcher_demo.dart';
+import 'package:flutter_study_app/pages/other/demo/webview_plugin_demo.dart';
+import 'package:flutter_study_app/pages/other/other_page.dart';
+import 'package:flutter_study_app/pages/transition_page.dart';
 
 
 //欢迎页面
