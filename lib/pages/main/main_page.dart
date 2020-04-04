@@ -8,6 +8,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/pages/drawer/drawer_page.dart';
 import 'package:flutter_study_app/pages/home/home_page.dart';
+import 'package:flutter_study_app/res/colors.dart';
+import 'package:flutter_study_app/utils/toast_util.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -15,7 +17,6 @@ class MainPage extends StatefulWidget {
     // TODO: implement createState
     return _MainPageState();
   }
-
 }
 
 class _MainPageState extends State<MainPage> {
@@ -36,6 +37,14 @@ class _MainPageState extends State<MainPage> {
       body: HomePage(),
       drawer: Drawer(
         child: DrawerPage(), //侧滑页面
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.share),
+        onPressed: () {
+          ToastUtil.showToast("功能开发中~");
+        },
+        tooltip: "放开我，按这么长时间干嘛！！！",
+        backgroundColor: AppColors.primaryColor,
       ),
     );
   }
