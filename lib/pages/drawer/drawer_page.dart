@@ -11,19 +11,7 @@ import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
 import 'package:flutter_study_app/utils/toast_util.dart';
 
-class DrawerPage extends StatefulWidget{
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _DrawerPageState();
-  }
-
-}
-
-class _DrawerPageState extends State<DrawerPage> {
-
-
+class DrawerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -31,23 +19,26 @@ class _DrawerPageState extends State<DrawerPage> {
       body: Column(
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text('程序猿在广东',style: TextStyle(fontWeight: FontWeight.bold),),
-            accountEmail: Text('这个世界不属于90后，只属于努力后！微信搜索 程序猿在广东，了解更多',maxLines: 2,),
+            accountName: Text(
+              '程序猿在广东',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            accountEmail: Text(
+              '这个世界不属于90后，只属于努力后！微信搜索 程序猿在广东，了解更多',
+              maxLines: 2,
+            ),
             currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage(
-                  'assets/images/logo.jpg'
-              ),
+              backgroundImage: AssetImage('assets/images/logo.jpg'),
             ),
             margin: EdgeInsets.zero,
           ),
-
           Expanded(
             child: ListView(
               children: <Widget>[
-                _listItem(Icon(Icons.brightness_medium),Text("主题"),(){
+                _listItem(Icon(Icons.brightness_medium), Text("主题"), () {
                   ToastUtil.showToast("功能开发中~");
                 }),
-                _listItem(Icon(Icons.people),Text("GitHub"),(){
+                _listItem(Icon(Icons.people), Text("GitHub"), () {
                   //WebView（flutter_webview_plugin）
                   Application.router.navigateTo(
                     context,
@@ -55,28 +46,29 @@ class _DrawerPageState extends State<DrawerPage> {
                     transition: TransitionType.native,
                   );
                 }),
-                _listItem(Icon(Icons.android),Text("关于"),(){
-                  ToastUtil.showToast("功能开发中~");
+                _listItem(Icon(Icons.android), Text("关于"), () {
+                  Application.router.navigateTo(
+                    context,
+                    Routes.aboutPage,
+                    transition: TransitionType.inFromRight,
+                  );
                 }),
-
               ],
             ),
           )
-
         ],
       ),
     );
   }
 
-  Widget _listItem(Icon leading,Widget title,onTap) {
+  Widget _listItem(Icon leading, Widget title, onTap) {
     return Container(
       child: ListTile(
         leading: leading,
         title: title,
         trailing: Icon(Icons.keyboard_arrow_right),
-        onTap:onTap,
+        onTap: onTap,
       ),
     );
   }
-
 }

@@ -23,11 +23,11 @@ class _HomePageState extends State<HomePage> {
             Application.router.navigateTo(context, Routes.dartPage,
                 transition: TransitionType.inFromRight);
           }),
-          _listItem("Widgets", Colors.cyan, () {
+          _listItem("Flutter Widgets", Colors.cyan, () {
             Application.router.navigateTo(context, Routes.widgetsPage,
                 transition: TransitionType.inFromRight);
           }),
-          _listItem("Api", Colors.deepOrangeAccent, () {
+          _listItem("Flutter Api", Colors.deepOrangeAccent, () {
             Application.router.navigateTo(context, Routes.apiPage,
                 transition: TransitionType.inFromRight);
           }),

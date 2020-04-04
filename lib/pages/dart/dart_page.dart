@@ -1,3 +1,10 @@
+/**
+ * @描述 dart
+ * @author chessluo
+ * @email superluo666@gmail.com
+ * @date 2020-04-04
+ *
+ */
 import 'package:flutter/material.dart';
 class DartPage extends StatelessWidget{
   @override
@@ -6,10 +13,10 @@ class DartPage extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Flutter Dart"),
+        title: Text("Dart"),
       ),
       body: Container(
-        child: Text("I am Flutter Dart"),
+        child: Text("I am Dart"),
       ),
     );
   }

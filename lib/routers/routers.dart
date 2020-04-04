@@ -26,6 +26,8 @@ class Routes {
   static String flutterChannel = "/flutterChannel";
   static String urlLauncher = "/urlLauncher";
 
+  static String aboutPage = "/about";
+
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -49,6 +51,8 @@ class Routes {
     router.define(sharedPreferences, handler: spHandler);
     router.define(flutterChannel, handler: channelHandler);
     router.define(urlLauncher, handler: urlLauncherHandler);
+
+    router.define(aboutPage, handler: aboutHandler);
 
   }
 }

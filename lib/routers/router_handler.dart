@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter_study_app/pages/api/api_page.dart';
 import 'package:flutter_study_app/pages/dart/dart_page.dart';
+import 'package:flutter_study_app/pages/drawer/about_page.dart';
 import 'package:flutter_study_app/pages/main/main_page.dart';
 import 'package:flutter_study_app/pages/other/demo/event_bus_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/file_zip_demo.dart';
@@ -123,4 +124,10 @@ var channelHandler = Handler(
 var urlLauncherHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return UrlLauncherDemo();
+});
+
+///关于
+var aboutHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return AboutPage();
 });
