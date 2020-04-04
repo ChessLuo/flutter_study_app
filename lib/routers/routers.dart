@@ -9,6 +9,12 @@ class Routes {
   static String transitionPage = "/transition";
   static String mainPage = "/main";
 
+  static String dartPage = "/dart";
+
+  static String apiPage = "/api";
+
+  static String widgetsPage = "/widgets";
+
   static String otherListPage = "/other";
   static String sqflitePage = "/sqflite";
   static String eventBusPage = "/eventBus";
@@ -28,6 +34,10 @@ class Routes {
 
     router.define(transitionPage, handler: transitionHandler);
     router.define(mainPage, handler: mainHandler);
+
+    router.define(dartPage, handler: dartHandler);
+    router.define(apiPage, handler: apiHandler);
+    router.define(widgetsPage, handler: widgetsHandler);
 
     router.define(otherListPage, handler: otherListHandler);
     router.define(sqflitePage, handler: sqfliteHandler);

@@ -2,7 +2,6 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
-import 'package:flutter_study_app/utils/toast_util.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,13 +20,16 @@ class _HomePageState extends State<HomePage> {
       child: ListView(
         children: <Widget>[
           _listItem("Dart", Colors.orange, () {
-            ToastUtil.showToast("功能开发中~");
+            Application.router.navigateTo(context, Routes.dartPage,
+                transition: TransitionType.inFromRight);
           }),
           _listItem("Widgets", Colors.cyan, () {
-            ToastUtil.showToast("功能开发中~");
+            Application.router.navigateTo(context, Routes.widgetsPage,
+                transition: TransitionType.inFromRight);
           }),
           _listItem("Api", Colors.deepOrangeAccent, () {
-            ToastUtil.showToast("功能开发中~");
+            Application.router.navigateTo(context, Routes.apiPage,
+                transition: TransitionType.inFromRight);
           }),
           _listItem("Other Demo", Colors.greenAccent, () {
             //其他demo列表页
