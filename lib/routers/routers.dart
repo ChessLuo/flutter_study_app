@@ -7,8 +7,9 @@ import './router_handler.dart';
 class Routes {
   static String root = "/";
   static String transitionPage = "/transition";
-  static String homePage = "/home";
+  static String mainPage = "/main";
 
+  static String otherListPage = "/other";
   static String sqflitePage = "/sqflite";
   static String eventBusPage = "/eventBus";
   static String fileZipPage = "/fileZip";
@@ -26,8 +27,9 @@ class Routes {
         });
 
     router.define(transitionPage, handler: transitionHandler);
-    router.define(homePage, handler: homeHandler);
+    router.define(mainPage, handler: mainHandler);
 
+    router.define(otherListPage, handler: otherListHandler);
     router.define(sqflitePage, handler: sqfliteHandler);
     router.define(eventBusPage, handler: eventBusHandler);
     router.define(fileZipPage, handler: fileZipHandler);

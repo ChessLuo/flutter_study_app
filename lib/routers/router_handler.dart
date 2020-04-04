@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
-import 'package:flutter_study_app/ui/demo/event_bus_demo.dart';
-import 'package:flutter_study_app/ui/demo/file_zip_demo.dart';
-import 'package:flutter_study_app/ui/demo/flutter_channel_demo.dart';
-import 'package:flutter_study_app/ui/demo/flutter_webview_demo.dart';
-import 'package:flutter_study_app/ui/demo/preferences_demo.dart';
-import 'package:flutter_study_app/ui/demo/provider_demo/provider_demo.dart';
-import 'package:flutter_study_app/ui/demo/sqflite_demo.dart';
-import 'package:flutter_study_app/ui/demo/url_launcher_demo.dart';
-import 'package:flutter_study_app/ui/demo/webview_plugin_demo.dart';
-import 'package:flutter_study_app/ui/pages/home/home_page.dart';
+import 'package:flutter_study_app/ui/pages/main/main_page.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/event_bus_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/file_zip_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/flutter_channel_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/flutter_webview_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/preferences_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/provider_demo/provider_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/sqflite_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/url_launcher_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/demo/webview_plugin_demo.dart';
+import 'package:flutter_study_app/ui/pages/other/other_page.dart';
 import 'package:flutter_study_app/ui/pages/transition_page.dart';
 
 
@@ -20,10 +21,17 @@ var transitionHandler = Handler(
   },
 );
 
-// app的首页
-var homeHandler = Handler(
+// app的主页
+var mainHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-    return MyHomePage();
+    return MainPage();
+  },
+);
+
+// 其他demo列表页
+var otherListHandler = Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    return OtherDemoList();
   },
 );
 

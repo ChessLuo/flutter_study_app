@@ -31,14 +31,8 @@ dependencies:
   path_provider: ^1.1.0 #文件路径管理
   archive: ^2.0.10 #解/压缩
   permission_handler: ^3.1.0 #permission
-  flutter_webview_plugin: ^0.3.5
-#  flutter_webview_plugin:
-#      path: ./../flutter_webview_plugin/
-#  flutter_webview_plugin:
-#      git:
-#      url: git://github.com/ChessLuo/flutter_webview_plugin.git
-
-  webview_flutter: ^0.3.15+1 #flutter官方webview
+  flutter_webview_plugin: ^0.3.10+1
+  webview_flutter: ^0.3.19+9 #flutter官方webview
   provider: ^3.0.0+1 #状态管理
   fluro: ^1.5.1 #路由管理
   url_launcher: ^5.2.5

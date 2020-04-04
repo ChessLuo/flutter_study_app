@@ -21,9 +21,29 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## 样式效果演示
-|主页|修改主题色|解压缩插件|
+|主页|
+|:---:|
+|<img border="1" src="./assets/main.png" width="310" height="auto">|
+
+|Dart|
+|:---:|
+|功能demo开发中~|
+
+|Widgets|
+|:---:|
+|功能demo开发中~|
+
+|Api|
+|:---:|
+|功能demo开发中~|
+
+|drawer|
+|:---:|
+|<img border="1" src="./assets/drawer.png" width="310" height="auto">|
+
+|其他Demo|修改主题色|解压缩插件|
 |:---:|:---:|:---:|
-|<img border="1" src="./assets/home.gif" width="310" height="auto">|<img border="1" src="./assets/gfone.gif" width="310" height="auto">|<img border="1" src="./assets/zip.png" width="310" height="auto">|
+|<img border="1" src="./assets/other.png" width="310" height="auto">|<img border="1" src="./assets/gfone.gif" width="310" height="auto">|<img border="1" src="./assets/zip.png" width="310" height="auto">|
 
 |flutterWebviewPlugin|fluro路由|shared_preferences|
 |:---:|:---:|:---:|
@@ -32,6 +52,7 @@ samples, guidance on mobile development, and a full API reference.
 |sqflite数据库|flutter channel|flutter url_launcher|
 |:---:|:---:|:---:|
 |<img border="1" src="./assets/sqflite.png" width="310" height="auto">|<img border="1" src="./assets/channel.gif" width="310" height="auto">|<img border="1" src="./assets/url_launcher.gif" width="310" height="auto">|
+
 
 
 ## 更多

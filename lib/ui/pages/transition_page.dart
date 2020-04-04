@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/common/constant.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
 
@@ -29,7 +28,7 @@ class TransitionPageState extends State<TransitionPage> with SingleTickerProvide
 
   void toHome() {
 //    Navigator.of(context).pushReplacementNamed(Constant.HOME_PAGE);
-    Application.router.navigateTo(context, Routes.homePage,replace: true,transition: TransitionType.inFromRight);
+    Application.router.navigateTo(context, Routes.mainPage,replace: true,transition: TransitionType.inFromRight);
   }
 
   @override
