@@ -9,25 +9,10 @@ A new Flutter application.
 
 
 ## 样式效果演示
-|主页|
-|:---:|
-|<img border="1" src="./assets/main.png" width="310" height="auto">|
+|主页|drawer|关于|
+|:---:|:---:|:---:|
+|<img border="1" src="./assets/main.png" width="310" height="auto">|<img border="1" src="./assets/drawer.png" width="310" height="auto">|<img border="1" src="./assets/about.png" width="310" height="auto">|
 
-|Dart|
-|:---:|
-|功能demo开发中~|
-
-|Widgets|
-|:---:|
-|功能demo开发中~|
-
-|Api|
-|:---:|
-|功能demo开发中~|
-
-|drawer|
-|:---:|
-|<img border="1" src="./assets/drawer.png" width="310" height="auto">|
 
 |其他Demo|修改主题色|解压缩插件|
 |:---:|:---:|:---:|
@@ -42,6 +27,17 @@ A new Flutter application.
 |<img border="1" src="./assets/sqflite.png" width="310" height="auto">|<img border="1" src="./assets/channel.gif" width="310" height="auto">|<img border="1" src="./assets/url_launcher.gif" width="310" height="auto">|
 
 
+|Dart|
+|:---:|
+|功能demo开发中~|
+
+|Widgets|
+|:---:|
+|功能demo开发中~|
+
+|Api|
+|:---:|
+|功能demo开发中~|
 
 ## 更多
 * 更多开源库请关注：[GitHub](https://github.com/ChessLuo)
