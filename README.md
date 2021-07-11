@@ -1,4 +1,4 @@
-# 项目简介
+## 项目简介
 
 A new Flutter application.
 我希望能利用业余时间去学习及总结一些有关flutter的知识并运用到项目中去，Come on！！！
