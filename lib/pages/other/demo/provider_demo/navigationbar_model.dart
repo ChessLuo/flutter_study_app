@@ -1,4 +1,3 @@
-
 /**
  * @描述 创建provider 数据模型
  *
@@ -10,12 +9,9 @@
  * @date 2019/7/23
  *
  */
-
 import 'package:flutter/material.dart';
 
-
 class BottomNavigationBarProvider with ChangeNotifier {
-
   int _currentIndex = 0;
 
   get currentIndex => _currentIndex;

@@ -29,7 +29,7 @@ class Routes {
   static String aboutPage = "/about";
 
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
         });

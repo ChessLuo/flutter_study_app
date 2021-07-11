@@ -14,21 +14,19 @@ import 'package:path_provider/path_provider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class FileZipDemo extends StatefulWidget{
+class FileZipDemo extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return _FileZipDemoState();
   }
-
 }
 
 class _FileZipDemoState extends State<FileZipDemo> {
-
   String _zipRootPath = "空";
-  TextEditingController _zipNameController=new TextEditingController();
-  TextEditingController _unZipNameController=new TextEditingController();
-  int _tag;//0表示解压、1表示压缩
+  TextEditingController _zipNameController = new TextEditingController();
+  TextEditingController _unZipNameController = new TextEditingController();
+  int _tag; //0表示解压、1表示压缩
 
   @override
   void initState() {
@@ -51,7 +49,9 @@ class _FileZipDemoState extends State<FileZipDemo> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text("手机存储根目录："),
-            Text(_zipRootPath,),
+            Text(
+              _zipRootPath,
+            ),
             Padding(padding: EdgeInsets.only(top: 20)),
             Text("1、输入手机存储根目录下的需要解压的文件名称"),
             _getZipNameView(0),
@@ -70,48 +70,58 @@ class _FileZipDemoState extends State<FileZipDemo> {
     return TextField(
       keyboardType: TextInputType.text,
       style: TextStyle(color: Color(0xFF888888)),
-      controller: tag==0?_unZipNameController:_zipNameController,
+      controller: tag == 0 ? _unZipNameController : _zipNameController,
       decoration: InputDecoration(
-        hintText: tag==0?"压缩包文件名称 格式如：test.zip":"待压缩文件名称 格式如：test",
+        hintText: tag == 0 ? "压缩包文件名称 格式如：test.zip" : "待压缩文件名称 格式如：test",
         hintStyle: TextStyle(color: Color(0xFF888888)),
-        contentPadding: EdgeInsets.only(left: 10,right: 10,bottom: 10,top: 10),
+        contentPadding:
+            EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 10),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
     );
   }
-  _getQueryBtnView(int tag){
+
+  _getQueryBtnView(int tag) {
     return Container(
       alignment: Alignment.center,
       child: RaisedButton(
-          onPressed: (){
-            tag==0?_unZip():_zip();
+          onPressed: () async {
+            //需要存储权限
+            if (await Permission.storage.request().isGranted) {
+              //开始解压或压缩
+              tag == 0 ? _unZip() : _zip();
+            }
+
+            // You can request multiple permissions at once.
+            // Map<Permission, PermissionStatus> statuses = await [
+            //   Permission.storage,
+            // ].request();
+            // print(statuses[Permission.storage]);
           },
-          child: Text(tag==0?"解压":"压缩",style: TextStyle(color: Colors.white,fontSize: 18),),
+          child: Text(
+            tag == 0 ? "解压" : "压缩",
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
           color: Colors.orange,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
-          )
-      ),
+          )),
     );
   }
 
   ///解压
-  void _unZip() async{
-    if(_unZipNameController.text==null||_unZipNameController.text==""){
+  void _unZip() async {
+    if (_unZipNameController.text == null || _unZipNameController.text == "") {
       Fluttertoast.showToast(msg: "压缩包文件名称不能为空！");
       return;
     }
-    String zipFilePath = _zipRootPath+"/"+_unZipNameController.text ;
-    if(!File(zipFilePath).existsSync()){
+    String zipFilePath = _zipRootPath + "/" + _unZipNameController.text;
+    if (!File(zipFilePath).existsSync()) {
       Fluttertoast.showToast(msg: "压缩包文件不存在！");
       return;
     }
-    PermissionStatus permission = await PermissionHandler().checkPermissionStatus(PermissionGroup.storage);
-    print(permission);
-    Map<PermissionGroup, PermissionStatus> permissions =
-    await PermissionHandler().requestPermissions([PermissionGroup.storage]);
 
     // 从磁盘读取Zip文件。
     List<int> bytes = File(zipFilePath).readAsBytesSync();
@@ -122,12 +132,11 @@ class _FileZipDemoState extends State<FileZipDemo> {
     for (ArchiveFile file in archive) {
       if (file.isFile) {
         List<int> data = file.content;
-        File(_zipRootPath+"/"+file.name)
+        File(_zipRootPath + "/" + file.name)
           ..createSync(recursive: true)
           ..writeAsBytesSync(data);
       } else {
-        Directory(_zipRootPath+"/"+file.name)
-          ..create(recursive: true);
+        Directory(_zipRootPath + "/" + file.name)..create(recursive: true);
       }
     }
     Fluttertoast.showToast(msg: "解压成功");
@@ -135,25 +144,21 @@ class _FileZipDemoState extends State<FileZipDemo> {
   }
 
   ///压缩
-  void _zip() async{
-    if(_zipNameController.text==null||_zipNameController.text==""){
+  void _zip() async {
+    if (_zipNameController.text == null || _zipNameController.text == "") {
       Fluttertoast.showToast(msg: "待压缩文件名称不能为空！");
       return;
     }
-    String directory = _zipRootPath+"/"+_zipNameController.text;
-    if(!Directory(directory).existsSync()){
+    String directory = _zipRootPath + "/" + _zipNameController.text;
+    if (!Directory(directory).existsSync()) {
       Fluttertoast.showToast(msg: "待压缩文件不存在！");
       return;
     }
-    PermissionStatus permission = await PermissionHandler().checkPermissionStatus(PermissionGroup.storage);
-    print(permission);
-    Map<PermissionGroup, PermissionStatus> permissions =
-    await PermissionHandler().requestPermissions([PermissionGroup.storage]);
 
     // Zip a directory to out.zip using the zipDirectory convenience method
     //使用zipDirectory方法将目录压缩到xxx.zip
     var encoder = ZipFileEncoder();
-    encoder.zipDirectory(Directory(directory), filename: directory+".zip");
+    encoder.zipDirectory(Directory(directory), filename: directory + ".zip");
     Fluttertoast.showToast(msg: "压缩成功");
     //手动创建目录和单个文件的zip。
 //    encoder.create('out2.zip');
@@ -162,12 +167,10 @@ class _FileZipDemoState extends State<FileZipDemo> {
 //    encoder.close();
   }
 
-  void _getRootPath()async {
+  void _getRootPath() async {
     String pathStr = (await getExternalStorageDirectory()).path;
     setState(() {
       _zipRootPath = pathStr;
     });
   }
-
-
 }

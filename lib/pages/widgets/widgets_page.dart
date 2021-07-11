@@ -6,7 +6,8 @@
  *
  */
 import 'package:flutter/material.dart';
-class WidgetsPage extends StatelessWidget{
+
+class WidgetsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -20,5 +21,4 @@ class WidgetsPage extends StatelessWidget{
       ),
     );
   }
-
 }

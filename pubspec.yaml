@@ -14,7 +14,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -22,20 +22,20 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.3
 
-  sqflite: ^1.1.5 #数据库
-  fluttertoast: ^3.0.4 #toast提示
-  event_bus: ^1.1.0 #eventbus
-  shared_preferences: ^0.5.3+4 #sp
-  path_provider: ^1.1.0 #文件路径管理
-  archive: ^2.0.10 #解/压缩
-  permission_handler: ^3.1.0 #permission
-  flutter_webview_plugin: ^0.3.10+1
-  webview_flutter: ^0.3.19+9 #flutter官方webview
-  provider: ^3.0.0+1 #状态管理
-  fluro: ^1.5.1 #路由管理
-  url_launcher: ^5.2.5
+  sqflite: ^2.0.0+3 #数据库
+  fluttertoast: ^8.0.7 #toast提示
+  event_bus: ^2.0.0 #eventbus
+  shared_preferences: ^2.0.6 #sp
+  path_provider: ^2.0.2 #文件路径管理
+  archive: ^3.1.2 #解/压缩
+  permission_handler: ^8.1.2 #permission
+  flutter_webview_plugin: ^0.4.0
+  webview_flutter: ^2.0.9 #flutter官方webview
+  provider: ^5.0.0 #状态管理
+  fluro: ^2.0.3 #路由管理
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:

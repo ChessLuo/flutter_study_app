@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MultiProvider(
-      providers: <SingleChildCloneableWidget>[
+      providers: [
         ChangeNotifierProvider.value(value: ColorFilteredProvider()),
       ],
       child: MyApp(),
@@ -19,7 +19,7 @@ void main() => runApp(MultiProvider(
 
 class MyApp extends StatefulWidget {
   MyApp() {
-    final router = new Router();
+    final router = new FluroRouter();
     Routes.configureRoutes(router);
     Application.router = router;
   }
@@ -50,12 +50,16 @@ class _MyAppState extends State<MyApp> {
     _setThemeColor();
     //订阅eventbus
     _colorSubscription = eventBus.on<ThemeColorEvent>().listen((event) {
-      //缓存主题色
-      _cacheColor(event.colorStr);
-      Color color = AppColors.getColor(event.colorStr);
-      setState(() {
-        _primaryColor = color;
-      });
+      try{
+        Color color = AppColors.getColor(event.colorStr);
+        setState(() {
+          _primaryColor = color;
+        });
+        //缓存主题色
+        _cacheColor(event.colorStr);
+      }catch(e){
+
+      }
     });
   }
 

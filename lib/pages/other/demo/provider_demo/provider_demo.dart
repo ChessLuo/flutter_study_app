@@ -1,5 +1,5 @@
 /**
- * @描述 provider 状态管理 
+ * @描述 provider 状态管理
  * @author chessluo
  * @email superluo666@gmail.com
  * @date 2019/7/21
@@ -11,7 +11,6 @@ import 'package:provider/provider.dart';
 import 'navigationbar_model.dart';
 
 class ProviderDemoPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -20,15 +19,14 @@ class ProviderDemoPage extends StatelessWidget {
         title: Text("provider状态管理"),
         centerTitle: true,
       ),
-      body: ChangeNotifierProvider<BottomNavigationBarProvider>(///provider绑定数据
+      body: ChangeNotifierProvider<BottomNavigationBarProvider>(
+        ///provider绑定数据
         child: BottomNavigationBarExample(),
-        builder: (BuildContext context) => BottomNavigationBarProvider(),
+        create: (BuildContext context) => BottomNavigationBarProvider(),
       ),
     );
   }
-
 }
-
 
 ///创建底部菜单view
 class BottomNavigationBarExample extends StatefulWidget {
@@ -52,9 +50,9 @@ class _BottomNavigationBarExampleState
     return Scaffold(
       body: currentTab[provider.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: provider.currentIndex,//获取当前index
+        currentIndex: provider.currentIndex, //获取当前index
         onTap: (index) {
-          provider.currentIndex = index;//设置当前index
+          provider.currentIndex = index; //设置当前index
         },
         items: [
           BottomNavigationBarItem(
@@ -81,15 +79,15 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Container(
-            alignment: Alignment.center,
-            height: 300,
-            width: 300,
-            child: Text(
-              "Home",
-              style: TextStyle(color: Colors.white, fontSize: 30),
-            ),
-            color: Colors.amber,
-          )),
+        alignment: Alignment.center,
+        height: 300,
+        width: 300,
+        child: Text(
+          "Home",
+          style: TextStyle(color: Colors.white, fontSize: 30),
+        ),
+        color: Colors.amber,
+      )),
     );
   }
 }
@@ -120,16 +118,15 @@ class Setting extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Container(
-            alignment: Alignment.center,
-            height: 300,
-            width: 300,
-            child: Text(
-              "Settings",
-              style: TextStyle(color: Colors.white, fontSize: 30),
-            ),
-            color: Colors.cyan,
-          )),
+        alignment: Alignment.center,
+        height: 300,
+        width: 300,
+        child: Text(
+          "Settings",
+          style: TextStyle(color: Colors.white, fontSize: 30),
+        ),
+        color: Colors.cyan,
+      )),
     );
   }
 }
-

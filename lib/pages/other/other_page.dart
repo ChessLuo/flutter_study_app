@@ -137,5 +137,4 @@ class _ListViewState extends State<OtherDemoList> {
       ),
     );
   }
-
 }

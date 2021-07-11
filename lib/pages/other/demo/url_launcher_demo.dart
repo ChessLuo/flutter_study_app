@@ -56,7 +56,8 @@ class _UrlLauncherState extends State<UrlLauncherDemo> {
                 margin: EdgeInsets.only(bottom: 4),
                 child: RaisedButton(
                   onPressed: () {
-                    const url = 'mailto:superluo666@gmail.com?subject=Test&body=测试跳转发送邮件';
+                    const url =
+                        'mailto:superluo666@gmail.com?subject=Test&body=测试跳转发送邮件';
                     _launchURL(url);
                   },
                   child: Text("发送邮件"),
@@ -85,7 +86,8 @@ class _UrlLauncherState extends State<UrlLauncherDemo> {
               margin: EdgeInsets.only(bottom: 4),
               child: RaisedButton(
                 onPressed: () {
-                  const url = 'mqqwpa://im/chat?chat_type=wpa&uin=123456';//uin是发送过去的qq号码
+                  const url =
+                      'mqqwpa://im/chat?chat_type=wpa&uin=123456'; //uin是发送过去的qq号码
                   _launchURL(url);
                 },
                 child: Text("打开QQ"),
@@ -121,7 +123,6 @@ class _UrlLauncherState extends State<UrlLauncherDemo> {
                 child: Text("打开高德地图"),
               ),
             ),
-
             Text(_rel),
           ],
         ),

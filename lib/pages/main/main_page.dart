@@ -27,6 +27,8 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    //获取filteredProvider实例
+    var filteredProvider = Provider.of<ColorFilteredProvider>(context);
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Color(0xfff2f2f2),
@@ -39,7 +41,6 @@ class _MainPageState extends State<MainPage> {
         actions: <Widget>[
           InkWell(
             onTap: (){
-              var filteredProvider = Provider.of<ColorFilteredProvider>(context);
               if(filteredProvider.currentColor==Colors.transparent){
                 actionTxt = "切回";
                 filteredProvider.currColorFiltered(Colors.grey);

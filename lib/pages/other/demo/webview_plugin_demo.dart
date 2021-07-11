@@ -10,14 +10,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-
 class WebViewPlgin extends StatefulWidget {
-  final String url;   //web地址
-  final String title;//标题
+  final String url; //web地址
+  final String title; //标题
 
-  WebViewPlgin(
-      {this.url,
-      this.title="详情",});
+  WebViewPlgin({
+    this.url,
+    this.title = "详情",
+  });
 
   @override
   _WebViewState createState() => _WebViewState();
@@ -36,14 +36,13 @@ class _WebViewState extends State<WebViewPlgin> {
 
     flutterWebviewPlugin.close();
     _onUrlChanged = flutterWebviewPlugin.onUrlChanged.listen((String url) {});
-    _onStateChanged = flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged state) {
-
-    });
-    _onHttpError = flutterWebviewPlugin.onHttpError.listen((WebViewHttpError error) {
+    _onStateChanged = flutterWebviewPlugin.onStateChanged
+        .listen((WebViewStateChanged state) {});
+    _onHttpError =
+        flutterWebviewPlugin.onHttpError.listen((WebViewHttpError error) {
       print(error);
     });
   }
-
 
   @override
   void dispose() {
@@ -56,7 +55,6 @@ class _WebViewState extends State<WebViewPlgin> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -76,7 +74,4 @@ class _WebViewState extends State<WebViewPlgin> {
       ),
     );
   }
-
-
-
 }

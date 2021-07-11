@@ -9,18 +9,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class ChannelDemo extends StatefulWidget{
-
+class ChannelDemo extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return ChannelState();
   }
-
 }
 
 class ChannelState extends State<ChannelDemo> {
-
   static const platform = const MethodChannel('flutter_study_app');
   String _batteryLevel = '电池电量未知';
 
@@ -67,5 +64,4 @@ class ChannelState extends State<ChannelDemo> {
       ),
     );
   }
-
 }

@@ -18,7 +18,7 @@ class ToastUtil {
     Fluttertoast.showToast(
         msg: "$msg",
         toastLength: toastLength,
-        timeInSecForIos: timeInSecForIos,
+        timeInSecForIosWeb: timeInSecForIos,
         backgroundColor: color);
   }
 }
