@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_study_app/common/events.dart';
 import 'package:flutter_study_app/provider/color_filtered_model.dart';
 import 'package:flutter_study_app/routers/application.dart';
@@ -10,12 +12,22 @@ import 'package:flutter_study_app/pages/transition_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider.value(value: ColorFilteredProvider()),
-      ],
-      child: MyApp(),
-    ));
+
+void main(){
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider.value(value: ColorFilteredProvider()),
+    ],
+    child: MyApp(),
+  ));
+
+  if (Platform.isAndroid) {
+    ///设置状态栏透明
+    SystemUiOverlayStyle systemUiOverlayStyle =
+    SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  }
+}
 
 class MyApp extends StatefulWidget {
   MyApp() {
@@ -50,16 +62,14 @@ class _MyAppState extends State<MyApp> {
     _setThemeColor();
     //订阅eventbus
     _colorSubscription = eventBus.on<ThemeColorEvent>().listen((event) {
-      try{
+      try {
         Color color = AppColors.getColor(event.colorStr);
         setState(() {
           _primaryColor = color;
         });
         //缓存主题色
         _cacheColor(event.colorStr);
-      }catch(e){
-
-      }
+      } catch (e) {}
     });
   }
 
@@ -70,13 +80,14 @@ class _MyAppState extends State<MyApp> {
       builder: (BuildContext context, colorFiltered, Widget child) {
         return ColorFiltered(
           colorFilter:
-          ColorFilter.mode(colorFiltered.currentColor, BlendMode.color),
+              ColorFilter.mode(colorFiltered.currentColor, BlendMode.color),
           child: MaterialApp(
-            debugShowCheckedModeBanner:false,
+            debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
-              primaryColor: _primaryColor,
-            ),
+                primaryColor: _primaryColor,
+                platform: TargetPlatform.iOS,
+                splashColor: Colors.transparent),
             home: TransitionPage(),
             onGenerateRoute: Application.router.generator,
           ),
