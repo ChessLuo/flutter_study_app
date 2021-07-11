@@ -1,11 +1,13 @@
-# flutter_study_app
+# 项目简介
 
 A new Flutter application.
+我希望能利用业余时间去学习及总结一些有关flutter的知识并运用到项目中去，Come on！！！
 
-## 入门与进阶
+## Flutter相关网站
 * [Google/flutter](https://github.com/flutter/flutter)
 * [flutter中文官网](https://flutter.cn/)
-* [alibaba/flutter-go](https://github.com/alibaba/flutter-go)
+* [pub.flutter](https://pub.flutter-io.cn/)
+* [dart中文官网](https://dart.cn/)
 
 
 ## 样式效果演示
