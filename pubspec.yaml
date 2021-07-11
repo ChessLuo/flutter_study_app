@@ -35,7 +35,8 @@ dependencies:
   webview_flutter: ^2.0.9 #flutter官方webview
   provider: ^5.0.0 #状态管理
   fluro: ^2.0.3 #路由管理
-  url_launcher: ^6.0.9
+  url_launcher: ^6.0.9 #url 跳转
+  share: ^2.0.4 #分享
 
 dev_dependencies:
   flutter_test:

@@ -5,14 +5,15 @@
  * @date 2020-04-04
  *
  */
+///
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/res/colors.dart';
+import 'package:flutter_study_app/res/string_zh.dart';
 import 'package:flutter_study_app/utils/toast_util.dart';
+import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
-
-  final String gitHubStr = "https://github.com/ChessLuo/flutter_study_app";
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -33,23 +34,30 @@ class AboutPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-                "        Flutter 是 Google 开源的 UI 工具包，能够帮助开发者通过一套代码库高效构建多平台精美应用，"
-                    "并且还支持移动、Web、桌面和嵌入式平台。\n\n"
-                    "        随着Flutter被越来越多的知名公司应用在自己的商业APP中，"
-                    "Flutter这门新技术也逐渐进入了移动开发者的视野，"
-                    "🔥勤能补拙，我希望能利用业余时间去学习及总结一些有关flutter的知识并运用到项目中去，"
-                    "Come on！！！"),
-            SizedBox(height: 20,),
+            Text(StringZh.appDesc),
+            SizedBox(
+              height: 20,
+            ),
             Text("项目地址："),
             InkWell(
-              onTap: (){
-                _launchURL(gitHubStr);
+              onTap: () {
+                _launchURL(StringZh.appAddress);
               },
-              child: Text(gitHubStr,style: TextStyle(color: Colors.blue,fontSize: 18),),
+              child: Text(
+                StringZh.appAddress,
+                style: TextStyle(color: Colors.blue, fontSize: 18),
+              ),
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.share),
+        onPressed: () {
+          Share.share(StringZh.appDesc+"\n\n项目地址："+StringZh.appAddress);
+        },
+        tooltip: "放开我，按这么长时间干嘛！！！",
+        backgroundColor: AppColors.primaryColor,
       ),
     );
   }

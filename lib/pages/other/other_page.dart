@@ -5,6 +5,7 @@
  * @date 2019-11-03
  *
  */
+///
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/routers/application.dart';
@@ -64,7 +65,7 @@ class _ListViewState extends State<OtherDemoList> {
           _listItem(itemTitles[0], () {
             //sqflite数据库
             Application.router.navigateTo(context, Routes.sqflitePage,
-                transition: TransitionType.fadeIn);
+                transition: TransitionType.inFromRight);
           }),
           _listItem(itemTitles[1], () {
             //eventbus事件总线
@@ -96,7 +97,7 @@ class _ListViewState extends State<OtherDemoList> {
             Application.router.navigateTo(
               context,
               Routes.fileZipPage,
-              transition: TransitionType.inFromLeft,
+              transition: TransitionType.inFromRight,
             );
           }),
           _listItem(itemTitles[3], () {
@@ -104,24 +105,24 @@ class _ListViewState extends State<OtherDemoList> {
             Application.router.navigateTo(
               context,
               '${Routes.webViewPlginPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview_plugin',
-              transition: TransitionType.native,
+              transition: TransitionType.inFromRight,
             );
           }),
           _listItem(itemTitles[4], () {
             //WebView（flutter官方插件）
             Application.router.navigateTo(context,
                 '${Routes.flutterWebViewPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview',
-                transition: TransitionType.material);
+                transition: TransitionType.inFromRight);
           }),
           _listItem(itemTitles[5], () {
             //provider状态管理
             Application.router.navigateTo(context, Routes.providerPage,
-                transition: TransitionType.cupertino);
+                transition: TransitionType.inFromRight);
           }),
           _listItem(itemTitles[6], () {
             //shared_preferences数据持久化
             Application.router.navigateTo(context, Routes.sharedPreferences,
-                transition: TransitionType.inFromLeft);
+                transition: TransitionType.inFromRight);
           }),
           _listItem(itemTitles[7], () {
             //Flutter Channel
@@ -131,10 +132,11 @@ class _ListViewState extends State<OtherDemoList> {
           _listItem(itemTitles[8], () {
             //Flutter Channel
             Application.router.navigateTo(context, Routes.urlLauncher,
-                transition: TransitionType.cupertino);
+                transition: TransitionType.inFromRight);
           }),
         ],
-      ),
+      )
     );
   }
+
 }

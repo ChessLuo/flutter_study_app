@@ -10,8 +10,10 @@ import 'package:flutter_study_app/pages/drawer/drawer_page.dart';
 import 'package:flutter_study_app/pages/home/home_page.dart';
 import 'package:flutter_study_app/provider/color_filtered_model.dart';
 import 'package:flutter_study_app/res/colors.dart';
+import 'package:flutter_study_app/res/string_zh.dart';
 import 'package:flutter_study_app/utils/toast_util.dart';
 import 'package:provider/provider.dart';
+import 'package:share/share.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -65,7 +67,7 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.share),
         onPressed: () {
-          ToastUtil.showToast("功能开发中~");
+          Share.share(StringZh.appDesc+"\n\n项目地址："+StringZh.appAddress);
         },
         tooltip: "放开我，按这么长时间干嘛！！！",
         backgroundColor: AppColors.primaryColor,

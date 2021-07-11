@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/res/string_zh.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
 
@@ -19,19 +20,19 @@ class _HomePageState extends State<HomePage> {
       padding: EdgeInsets.all(20),
       child: ListView(
         children: <Widget>[
-          _listItem("Dart", Colors.orange, () {
+          _listItem(StringZh.dart, Colors.orange, () {
             Application.router.navigateTo(context, Routes.dartPage,
                 transition: TransitionType.inFromRight);
           }),
-          _listItem("Flutter Widgets", Colors.cyan, () {
+          _listItem(StringZh.flWidgets, Colors.cyan, () {
             Application.router.navigateTo(context, Routes.widgetsPage,
                 transition: TransitionType.inFromRight);
           }),
-          _listItem("Flutter Api", Colors.deepOrangeAccent, () {
+          _listItem(StringZh.flApi, Colors.deepOrangeAccent, () {
             Application.router.navigateTo(context, Routes.apiPage,
                 transition: TransitionType.inFromRight);
           }),
-          _listItem("Other Demo", Colors.greenAccent, () {
+          _listItem(StringZh.otherDemo, Colors.greenAccent, () {
             //其他demo列表页
             Application.router.navigateTo(context, Routes.otherListPage,
                 transition: TransitionType.inFromRight);
