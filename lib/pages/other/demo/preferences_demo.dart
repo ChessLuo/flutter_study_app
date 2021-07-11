@@ -135,7 +135,7 @@ class _PreferencesState extends State<PreferencesDemo> {
           ],
         ),
       ),
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
     );
   }
 

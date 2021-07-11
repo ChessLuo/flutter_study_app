@@ -66,7 +66,7 @@ class _SqflitePageState extends State<SqflitePage> {
           ],
         ),
       ),
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
     );
   }
 
