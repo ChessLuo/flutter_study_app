@@ -1,7 +1,5 @@
 class StringZh {
-  static const String dart = "Dart";
-  static const String flWidgets = "Flutter Widgets";
-  static const String flApi = "Flutter Api";
+  static const String dart = "Dart基础";
   static const String otherDemo = "Other Demo";
   static const String appDesc = "        Flutter 是 Google 开源的 UI 工具包，能够帮助开发者通过一套代码库高效构建多平台精美应用，"
       "并且还支持移动、Web、桌面和嵌入式平台。\n\n"

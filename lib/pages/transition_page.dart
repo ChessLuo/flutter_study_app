@@ -80,8 +80,8 @@ class TransitionPageState extends State<TransitionPage>
             children: <Widget>[
               new Image.asset(
                 'assets/images/logo.jpg',
-                width: animation.value * 150,
-                height: animation.value * 150,
+                width: animation.value<=0?15:animation.value * 150,
+                height: animation.value<=0?15:animation.value * 150,
               ),
             ],
           ),

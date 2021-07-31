@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/common/model/func_model.dart';
 import 'package:flutter_study_app/res/string_zh.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
@@ -7,39 +8,46 @@ import 'package:flutter_study_app/routers/routers.dart';
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _HomePageState();
   }
 }
 
 class _HomePageState extends State<HomePage> {
+  List<FuncModel> itemTitles = [
+    FuncModel(
+        name: StringZh.dart,
+        bgColor: Colors.orange,
+        routePath: Routes.dartPage),
+    FuncModel(
+        name: '常用Widget', bgColor: Colors.cyan, routePath: Routes.widgetsPage),
+    FuncModel(
+        name: '状态管理',
+        bgColor: Colors.deepOrangeAccent,
+        routePath: Routes.statePage),
+    FuncModel(
+        name: 'Canvas与动画', bgColor: Colors.orange, routePath: Routes.animPage),
+    FuncModel(
+        name: '本地数据存储', bgColor: Colors.cyan, routePath: Routes.localCachePage),
+    FuncModel(
+        name: StringZh.otherDemo,
+        bgColor: Colors.deepOrangeAccent,
+        routePath: Routes.otherListPage),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
-      padding: EdgeInsets.all(20),
-      child: ListView(
-        children: <Widget>[
-          _listItem(StringZh.dart, Colors.orange, () {
-            Application.router.navigateTo(context, Routes.dartPage,
-                transition: TransitionType.inFromRight);
-          }),
-          _listItem(StringZh.flWidgets, Colors.cyan, () {
-            Application.router.navigateTo(context, Routes.widgetsPage,
-                transition: TransitionType.inFromRight);
-          }),
-          _listItem(StringZh.flApi, Colors.deepOrangeAccent, () {
-            Application.router.navigateTo(context, Routes.apiPage,
-                transition: TransitionType.inFromRight);
-          }),
-          _listItem(StringZh.otherDemo, Colors.greenAccent, () {
-            //其他demo列表页
-            Application.router.navigateTo(context, Routes.otherListPage,
-                transition: TransitionType.inFromRight);
-          }),
-        ],
-      ),
-    );
+        padding: EdgeInsets.all(20),
+        child: ListView.builder(
+            itemCount: itemTitles.length,
+            itemBuilder: (BuildContext context, int index) {
+              return _listItem(
+                  itemTitles[index].name, itemTitles[index].bgColor, () {
+                Application.router.navigateTo(
+                    context, itemTitles[index].routePath,
+                    transition: TransitionType.inFromRight);
+              });
+            }));
   }
 
   Widget _listItem(String title, Color bgColor, onTap) {
@@ -56,6 +64,7 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             title,
             style: TextStyle(
+              color: Colors.white,
               fontSize: 20,
             ),
           )),

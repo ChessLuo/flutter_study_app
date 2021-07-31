@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
-import 'package:flutter_study_app/pages/api/api_page.dart';
+import 'package:flutter_study_app/pages/anim/anim_page.dart';
+import 'package:flutter_study_app/pages/cache/local_cache_page.dart';
 import 'package:flutter_study_app/pages/dart/dart_page.dart';
 import 'package:flutter_study_app/pages/drawer/about_page.dart';
 import 'package:flutter_study_app/pages/main/main_page.dart';
@@ -8,12 +9,13 @@ import 'package:flutter_study_app/pages/other/demo/event_bus_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/file_zip_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/flutter_channel_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/flutter_webview_demo.dart';
-import 'package:flutter_study_app/pages/other/demo/preferences_demo.dart';
+import 'package:flutter_study_app/pages/cache/demo/preferences_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/provider_demo/provider_demo.dart';
-import 'package:flutter_study_app/pages/other/demo/sqflite_demo.dart';
+import 'package:flutter_study_app/pages/cache/demo/sqflite_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/url_launcher_demo.dart';
 import 'package:flutter_study_app/pages/other/demo/webview_plugin_demo.dart';
 import 'package:flutter_study_app/pages/other/other_page.dart';
+import 'package:flutter_study_app/pages/state/state_page.dart';
 import 'package:flutter_study_app/pages/transition_page.dart';
 import 'package:flutter_study_app/pages/widgets/widgets_page.dart';
 
@@ -38,10 +40,10 @@ var dartHandler = Handler(
   },
 );
 
-/// flutter api
-var apiHandler = Handler(
+/// flutter 动画
+var animHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-    return ApiPage();
+    return AnimPage();
   },
 );
 
@@ -49,6 +51,13 @@ var apiHandler = Handler(
 var widgetsHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
     return WidgetsPage();
+  },
+);
+
+/// flutter
+var localCacheHandler = Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    return LocalCachePage();
   },
 );
 
@@ -103,6 +112,10 @@ var flutterWebViewHandler = Handler(
 });
 
 ///provider状态管理
+var stateHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return StateDemoList();
+});
 var providerHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return ProviderDemoPage();

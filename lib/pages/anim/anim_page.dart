@@ -6,19 +6,19 @@
  *
  */
 import 'package:flutter/material.dart';
-class ApiPage extends StatelessWidget{
+
+class AnimPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Flutter Api"),
+        title: Text("Canvas与动画"),
       ),
       body: Container(
-        child: Text("I am Flutter Api"),
+        child: Text("I am Flutter AnimPage"),
       ),
     );
   }
-
 }

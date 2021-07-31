@@ -6,11 +6,23 @@
  *
  */
 import 'package:flutter/material.dart';
+import 'package:flutter_study_app/common/model/func_model.dart';
 
-class WidgetsPage extends StatelessWidget {
+class WidgetsPage extends StatefulWidget {
+  const WidgetsPage({Key key}) : super(key: key);
+
+  @override
+  _WidgetsPageState createState() => _WidgetsPageState();
+}
+
+class _WidgetsPageState extends State<WidgetsPage> {
+
+   List<FuncModel> itemTitles = [
+    // FuncModel(name: 'sqflite数据库', routePath: Routes.sqflitePage),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

@@ -7,6 +7,7 @@ import 'package:flutter_study_app/provider/color_filtered_model.dart';
 import 'package:flutter_study_app/res/colors.dart';
 import 'package:flutter_study_app/routers/application.dart';
 import 'package:flutter_study_app/routers/routers.dart';
+import 'package:flutter_study_app/utils/object_util.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -93,8 +94,10 @@ class _MyAppState extends State<MyApp> {
 
   void _setThemeColor() async {
     String cacheColorStr = await _getCacheColor("themeColorStr");
-    setState(() {
-      _primaryColor = AppColors.getColor(cacheColorStr);
-    });
+    if (ObjectUtil.isNotEmpty(cacheColorStr)) {
+      setState(() {
+        _primaryColor = AppColors.getColor(cacheColorStr);
+      });
+    }
   }
 }
