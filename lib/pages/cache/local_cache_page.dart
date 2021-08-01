@@ -1,5 +1,5 @@
 /**
- * @描述 数据库存储
+ * @描述 数据库存储相关demo
  * @author chessluo
  * @email superluo666@gmail.com
  * @date 2019-11-03

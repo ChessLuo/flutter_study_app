@@ -6,8 +6,8 @@
  *
  */
 import 'package:flutter/material.dart';
-import 'package:flutter_study_app/pages/drawer/drawer_page.dart';
-import 'package:flutter_study_app/pages/home/home_page.dart';
+import 'package:flutter_study_app/pages/main/drawer_page.dart';
+import 'package:flutter_study_app/pages/main/home_page.dart';
 import 'package:flutter_study_app/provider/color_filtered_model.dart';
 import 'package:flutter_study_app/res/colors.dart';
 import 'package:flutter_study_app/res/string_zh.dart';

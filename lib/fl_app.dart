@@ -22,7 +22,6 @@ class MyApp extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MyAppState();
   }
 }
@@ -33,7 +32,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     //取消订阅
     _colorSubscription.cancel();
@@ -41,7 +39,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _setThemeColor();
     //订阅eventbus
@@ -59,7 +56,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Consumer<ColorFilteredProvider>(
       builder: (BuildContext context, colorFiltered, Widget child) {
         return ColorFiltered(

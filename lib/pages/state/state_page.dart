@@ -1,5 +1,6 @@
 /**
- * @描述 状态管理
+ * @描述 状态管理相关demo
+ *  provider、flutter_redux、bloc等
  * @author chessluo
  * @email superluo666@gmail.com
  * @date 2019-11-03

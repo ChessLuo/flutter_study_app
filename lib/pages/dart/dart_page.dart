@@ -1,5 +1,5 @@
 /**
- * @描述 dart
+ * @描述 dart相关demo
  * @author chessluo
  * @email superluo666@gmail.com
  * @date 2020-04-04

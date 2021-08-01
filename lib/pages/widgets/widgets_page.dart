@@ -26,7 +26,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Flutter Widgets"),
+        title: Text("常用Widgets"),
       ),
       body: Container(
         child: Text("I am Flutter Widgets"),

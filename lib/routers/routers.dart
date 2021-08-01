@@ -7,10 +7,14 @@ class Routes {
   static String root = "/";
   static String transitionPage = "/transition";
   static String mainPage = "/main";
+  static String aboutPage = "/about";
 
   static String dartPage = "/dart";
-  static String animPage = "/anim";
   static String widgetsPage = "/widgets";
+
+  ///canvas与动画
+  static String animPage = "/anim";
+  static String customPaintPage = "/customPaint";
 
   ///状态管理
   static String statePage = "/state";
@@ -30,8 +34,6 @@ class Routes {
   static String flutterChannel = "/flutterChannel";
   static String urlLauncher = "/urlLauncher";
 
-  static String aboutPage = "/about";
-
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc:
@@ -39,10 +41,13 @@ class Routes {
 
     router.define(transitionPage, handler: transitionHandler);
     router.define(mainPage, handler: mainHandler);
+    router.define(aboutPage, handler: aboutHandler);
 
     router.define(dartPage, handler: dartHandler);
-    router.define(animPage, handler: animHandler);
     router.define(widgetsPage, handler: widgetsHandler);
+
+    router.define(animPage, handler: animHandler);
+    router.define(customPaintPage, handler: customPaintHandler);
 
     router.define(statePage, handler: stateHandler);
     router.define(providerPage, handler: providerHandler);
@@ -58,7 +63,5 @@ class Routes {
     router.define(flutterWebViewPage, handler: flutterWebViewHandler);
     router.define(flutterChannel, handler: channelHandler);
     router.define(urlLauncher, handler: urlLauncherHandler);
-
-    router.define(aboutPage, handler: aboutHandler);
   }
 }

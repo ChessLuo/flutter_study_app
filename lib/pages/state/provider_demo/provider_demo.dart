@@ -13,7 +13,6 @@ import 'navigationbar_model.dart';
 class ProviderDemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("provider状态管理"),

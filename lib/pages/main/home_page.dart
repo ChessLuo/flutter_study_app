@@ -15,22 +15,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<FuncModel> itemTitles = [
     FuncModel(
-        name: StringZh.dart,
+        name: StringZh.dart, bgColor: Colors.red, routePath: Routes.dartPage),
+    FuncModel(
+        name: '常用Widget',
         bgColor: Colors.orange,
-        routePath: Routes.dartPage),
+        routePath: Routes.widgetsPage),
+    FuncModel(name: '状态管理', bgColor: Colors.amber, routePath: Routes.statePage),
     FuncModel(
-        name: '常用Widget', bgColor: Colors.cyan, routePath: Routes.widgetsPage),
-    FuncModel(
-        name: '状态管理',
-        bgColor: Colors.deepOrangeAccent,
-        routePath: Routes.statePage),
-    FuncModel(
-        name: 'Canvas与动画', bgColor: Colors.orange, routePath: Routes.animPage),
+        name: 'Canvas与动画', bgColor: Colors.green, routePath: Routes.animPage),
     FuncModel(
         name: '本地数据存储', bgColor: Colors.cyan, routePath: Routes.localCachePage),
     FuncModel(
+        name: 'Flutter Channel',
+        bgColor: Colors.blue,
+        routePath: Routes.flutterChannel),
+    FuncModel(
         name: StringZh.otherDemo,
-        bgColor: Colors.deepOrangeAccent,
+        bgColor: Colors.purple,
         routePath: Routes.otherListPage),
   ];
 
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _listItem(String title, Color bgColor, onTap) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
       child: Container(
           alignment: Alignment.center,

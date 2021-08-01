@@ -31,7 +31,6 @@ class _ListViewState extends State<OtherDemoList> {
         name: 'WebView（flutter官方插件）',
         routePath:
             '${Routes.flutterWebViewPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview'),
-    FuncModel(name: 'Flutter Channel', routePath: Routes.flutterChannel),
     FuncModel(name: 'url_launcher', routePath: Routes.urlLauncher),
   ];
 
@@ -59,7 +58,8 @@ class _ListViewState extends State<OtherDemoList> {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
-          border: BorderDirectional(bottom: BorderSide(color: Colors.grey))),
+          border: BorderDirectional(
+              bottom: BorderSide(color: Colors.grey, width: 0.5))),
       child: ListTile(
         title: Text(itemTitle),
         trailing: Icon(Icons.keyboard_arrow_right),
